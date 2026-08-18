@@ -3,70 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SKYFRAME TR | Hava Çekim Servisi</title>
+  <title>SKYFRAME TR | Premium Aerial Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Ana Ekran: Tam Ekran Drone Videosu -->
-  <div class="hero-section">
-    <video autoplay loop muted playsinline class="hero-video">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-shot-of-coastal-mountains-and-sea-41193-large.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-
-    <header class="top-bar">
-      <div class="brand">SKYFRAME<span>TR</span></div>
-      <a href="https://wa.me/905418190790" target="_blank" class="wa-btn">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
-    </header>
-
-    <div class="hero-text">
-      <h1>PROFESYONEL DRONE ÇEKİMLERİ</h1>
-      <p>4K Sinematik & FPV Hava Çekim Hizmetleri</p>
+  <!-- Minimal Navbar -->
+  <header class="navbar">
+    <div class="brand">SKYFRAME<span>.TR</span></div>
+    <div class="nav-links">
+      <a href="#showcase">Çekimler</a>
+      <a href="#services">Hizmetler</a>
     </div>
-  </div>
+    <!-- Numarayı sildik, sadece WhatsApp kaldı -->
+    <a href="https://wa.me/905418190790" target="_blank" class="nav-wa-btn">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+  </header>
 
-  <!-- Örnek Çekim Videoları -->
-  <section class="video-section">
-    <h2 class="section-title">ÖRNEK DRONE VİDEOLARI</h2>
+  <!-- Hero Başlık -->
+  <section class="hero-clean">
+    <div class="hero-label">AERIAL CINEMATOGRAPHY</div>
+    <h1 class="headline">GÖKYÜZÜNDEN<br>YENİDEN TANIMLANAN<br>PERSPEKTİF.</h1>
+    <p class="lead-text">Mimari yapılar, özel prodüksiyonlar ve arazi projeleri için milimetrik hassasiyete sahip 4K FPV ve hava çekim çözümleri.</p>
+  </section>
+
+  <!-- İzlenebilir Ufak Video Kartları -->
+  <section id="showcase" class="video-showcase-section">
+    <div class="section-head">
+      <h2>ÖRNEK ÇEKİMLER</h2>
+      <span>OYNATIP İZLEYEBİLİRSİNİZ</span>
+    </div>
 
     <div class="video-grid">
-      <div class="video-card">
-        <video controls poster="watermarked_img_8449468396352792815.png">
+      <div class="mini-video-card">
+        <video controls poster="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80">
           <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-city-at-night-41484-large.mp4" type="video/mp4">
         </video>
-        <h3>Lüks Yapı & Gayrimenkul</h3>
+        <h3>Lüks Mimari & Villa</h3>
       </div>
 
-      <div class="video-card">
-        <video controls poster="watermarked_img_4476936232623684403.png">
+      <div class="mini-video-card">
+        <video controls poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
           <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-shot-of-coastal-mountains-and-sea-41193-large.mp4" type="video/mp4">
         </video>
-        <h3>Manzara & Doğa Çekimi</h3>
+        <h3>Sahil & Doğa Çekimi</h3>
       </div>
 
-      <div class="video-card">
-        <video controls poster="watermarked_img_18293457970046685620.png">
+      <div class="mini-video-card">
+        <video controls poster="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80">
           <source src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-mountain-road-41551-large.mp4" type="video/mp4">
         </video>
-        <h3>FPV Dinamik Takip</h3>
+        <h3>Dinamik FPV Takip</h3>
       </div>
     </div>
   </section>
 
-  <!-- Alt Bilgi / İletişim -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2026 SKYFRAME TR</p>
-      <a href="https://wa.me/905418190790" target="_blank" class="footer-link">
-        <i class="fa-brands fa-whatsapp"></i> Proje ve Fiyat Teklifi Al
+  <!-- Hizmet Kapsamı -->
+  <section id="services" class="section-grid">
+    <div class="grid-header">
+      <h2>HİZMETLER</h2>
+    </div>
+    <div class="mosaic-container">
+      <div class="mosaic-box">
+        <span class="box-num">01</span>
+        <h3>Mimari & Gayrimenkul</h3>
+        <p>Lüks konut, otel ve dev altyapı projelerinin estetik çizgilerini vurgulayan dinamik havadan görüntüleme.</p>
+      </div>
+      <div class="mosaic-box">
+        <span class="box-num">02</span>
+        <h3>Sinematik Prodüksiyon</h3>
+        <p>Reklam filmleri, klipler ve özel etkinlikler için yüksek hızlı FPV ve 4K kesintisiz çekimler.</p>
+      </div>
+      <div class="mosaic-box">
+        <span class="box-num">03</span>
+        <h3>Haritalama & Arazi</h3>
+        <p>Endüstriyel sahalar ve arsa projeleri için hassas ölçüm, takip ve detaylı gözlem analizleri.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-clean">
+    <div class="footer-main">
+      <h2>BİRLİKTE ÇALIŞALIM.</h2>
+      <a href="https://wa.me/905418190790" target="_blank" class="footer-wa-btn">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp İletişim
       </a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SKYFRAME TR. Tüm Hakları Saklıdır.</p>
     </div>
   </footer>
 
