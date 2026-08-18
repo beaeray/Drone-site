@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.8),
+        transparent
+    );
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: .8;
+    transition: .3s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.7)
+        ),
+        url("https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 70%,
+        #050505 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: heroIn 1.2s ease forwards;
+}
+
+.small-title,
+.section-title {
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: .9;
+    letter-spacing: -5px;
+    margin-bottom: 30px;
+}
+
+h1 span,
+.contact span {
+    color: #aaa;
+}
+
+.description {
+    max-width: 500px;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 28px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+}
+
+.section {
+    padding: 140px 8%;
+    background: #050505;
+}
+
+h2 {
+    font-size: clamp(45px, 6vw, 80px);
+    letter-spacing: -3px;
+    margin-bottom: 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    min-height: 300px;
+    padding: 35px;
+    border: 1px solid #222;
+    transition: .5s;
+    background: #080808;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-color: #666;
+}
+
+.number {
+    color: #666;
+    margin-bottom: 100px;
+}
+
+.card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #888;
+    line-height: 1.6;
+}
+
+.portfolio {
+    min-height: 80vh;
+    padding: 120px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: #0a0a0a;
+}
+
+.portfolio-text p:last-child {
+    color: #888;
+    max-width: 450px;
+    line-height: 1.7;
+}
+
+.portfolio-box {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #222,
+            #080808
+        );
+
+    border: 1px solid #333;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 8px;
+    color: #555;
+
+    transition: .6s;
+}
+
+.portfolio-box:hover {
+    transform: scale(.97);
+}
+
+.contact {
+    min-height: 70vh;
+    padding: 150px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #050505;
+}
+
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 13px;
+}
+
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 0 25px;
+    }
+
+    h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .section,
+    .portfolio,
+    .contact {
+        padding: 90px 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-box {
+        height: 350px;
+    }
+}
