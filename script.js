@@ -1,53 +1,32 @@
-const hero = document.querySelector(".hero");
-const heroImage = document.querySelector(".hero-image");
-
-const services = document.querySelectorAll(".service");
-const photos = document.querySelectorAll(".photo");
-
-
-/* SCROLL ANIMATION */
-
-const observer = new IntersectionObserver(
-    (entries) => {
-
-        entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-
-services.forEach((service) => {
-    observer.observe(service);
+// Sayfa içi menü linklerine basıldığında yumuşak kaydırma (Smooth Scroll)
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });
 
-photos.forEach((photo) => {
-    observer.observe(photo);
+// WhatsApp ve Telefon İletişim Tıklama Takibi
+const waButtons = document.querySelectorAll('.float-wa, .btn-main.wa');
+waButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log('Kullanıcı WhatsApp hattına yönlendirildi.');
+    });
 });
 
-
-/* DRONE PARALLAX EFFECT */
-
-window.addEventListener("scroll", () => {
-
-    const scroll = window.scrollY;
-
-    if (heroImage && scroll < window.innerHeight) {
-
-        heroImage.style.transform =
-            `scale(1.05) translateY(${scroll * 0.12}px)`;
-
+// Sayfa Kaydırıldığında Navbar Arka Planını Koyulaştırma
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = '#101014';
+        header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.5)';
+    } else {
+        header.style.backgroundColor = '#18181c';
+        header.style.boxShadow = 'none';
     }
-
 });

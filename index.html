@@ -1,156 +1,99 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEROVISION | Drone Çekim</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEERAY DRONE | Profesyonel Hava Çekimleri</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-<header>
-    <div class="logo">AEROVISION</div>
-
+  <!-- Üst Menü (Navbar) -->
+  <header>
+    <div class="logo">BEERAY <span>DRONE</span></div>
     <nav>
-        <a href="#home">Ana Sayfa</a>
-        <a href="#services">Hizmetler</a>
-        <a href="#portfolio">Portföy</a>
-        <a href="#contact">İletişim</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#sosyal">Sosyal Medya</a>
+      <a href="#iletisim">İletişim</a>
     </nav>
-</header>
+    <a href="tel:+905307304192" class="btn-phone"><i class="fa-solid fa-phone"></i> 0530 730 41 92</a>
+  </header>
 
-<section id="home" class="hero">
-
-    <div class="hero-image"></div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-
-        <div class="tag">DRONE • PHOTO • VIDEO</div>
-
-        <h1>
-            Dünyaya<br>
-            <span>Yukarıdan Bak.</span>
-        </h1>
-
-        <p>
-            Profesyonel drone çekimleriyle
-            görüntülerinize farklı bir perspektif kazandırın.
-        </p>
-
-        <div class="buttons">
-            <a href="#portfolio" class="button main-button">
-                Portföyü Gör
-            </a>
-
-            <a href="#contact" class="button">
-                Teklif Al
-            </a>
-        </div>
-
+  <!-- Karşılama Alanı (Hero) -->
+  <section class="hero">
+    <h1>Dünyaya Farklı Bir Açıdan Bakın</h1>
+    <p>4K Profesyonel drone çekimleri, etkinlik ve tanıtım hizmetleri.</p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/905307304192" target="_blank" class="btn-main wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Fiyat Al</a>
+      <a href="https://instagram.com/beaeray" target="_blank" class="btn-main ig"><i class="fa-brands fa-instagram"></i> Instagram'da İncele</a>
     </div>
+  </section>
 
-    <div class="scroll">SCROLL ↓</div>
-
-</section>
-
-<section class="about">
-
-    <div class="tag">AEROVISION</div>
-
-    <h2>
-        Sıradan görüntülerden
-        <span>daha fazlası.</span>
-    </h2>
-
-    <p>
-        Havadan çekim teknolojisini yaratıcı görüntülerle
-        birleştirerek markalar, mekanlar ve araçlar için
-        etkileyici içerikler oluşturuyoruz.
-    </p>
-
-</section>
-
-<section id="services" class="services">
-
-    <div class="tag">HİZMETLER</div>
-
-    <h2>Ne çekiyoruz?</h2>
-
-    <div class="service-container">
-
-        <div class="service">
-            <small>01</small>
-            <h3>Gayrimenkul</h3>
-            <p>Villa, arsa, bina ve projeler için profesyonel havadan çekimler.</p>
-        </div>
-
-        <div class="service">
-            <small>02</small>
-            <h3>Otomotiv</h3>
-            <p>Otomobil ve motosikletler için dinamik sinematik çekimler.</p>
-        </div>
-
-        <div class="service">
-            <small>03</small>
-            <h3>Tanıtım</h3>
-            <p>İşletmeler ve sosyal medya için profesyonel video içerikleri.</p>
-        </div>
-
+  <!-- Hizmetler -->
+  <section id="hizmetler" class="services">
+    <h2>Hizmetlerimiz</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fa-solid fa-building"></i>
+        <h3>Gayrimenkul & Tanıtım</h3>
+        <p>Arsa, otel ve bina çekimleriyle projenizi en iyi açılardan sunun.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-film"></i>
+        <h3>Klip & Etkinlik</h3>
+        <p>Düğün, konser ve özel organizasyonlar için yüksek kaliteli 4K video çekimleri.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h3>Haritalama & Arazi</h3>
+        <p>Endüstriyel ve tarımsal alanlar için detaylı havadan görüntüleme.</p>
+      </div>
     </div>
+  </section>
 
-</section>
-
-<section id="portfolio" class="portfolio">
-
-    <div class="tag">PORTFÖY</div>
-
-    <h2>
-        Gökyüzünden
-        <span>hikayeler.</span>
-    </h2>
-
-    <div class="gallery">
-
-        <div class="photo photo-one">
-            <div>01</div>
-        </div>
-
-        <div class="photo photo-two">
-            <div>02</div>
-        </div>
-
-        <div class="photo photo-three">
-            <div>03</div>
-        </div>
-
+  <!-- Örnek Videolar -->
+  <section id="galeri" class="gallery">
+    <h2>Örnek Çekimlerimiz</h2>
+    <div class="grid">
+      <div class="card">
+        <video controls poster="kapak1.jpg">
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <h3>Manzara & Tanıtım Çekimi</h3>
+      </div>
+      <div class="card">
+        <video controls poster="kapak2.jpg">
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+        <h3>Özel Etkinlik Çekimi</h3>
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- Sosyal Medya ve İletişim -->
+  <section id="sosyal" class="social-section">
+    <h2>Bizi Takip Edin</h2>
+    <p>En son projelerimiz ve çekim arkası görüntüler için sosyal medya hesaplarımız:</p>
+    <div class="social-links">
+      <a href="https://instagram.com/beaeray" target="_blank" class="social-btn instagram">
+        <i class="fa-brands fa-instagram"></i> Instagram (@beaeray)
+      </a>
+      <a href="https://youtube.com" target="_blank" class="social-btn youtube">
+        <i class="fa-brands fa-youtube"></i> YouTube Kanalı
+      </a>
+    </div>
+  </section>
 
-<section id="contact" class="contact">
+  <!-- Sabit WhatsApp Butonu -->
+  <a href="https://wa.me/905307304192" class="float-wa" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-    <div class="tag">PROJEN Mİ VAR?</div>
-
-    <h2>
-        Havadan<br>
-        <span>başlayalım.</span>
-    </h2>
-
-    <a href="#" class="button main-button">
-        Teklif Al
-    </a>
-
-</section>
-
-<footer>
-    <strong>AEROVISION</strong>
-    <p>© 2026 AEROVISION</p>
-</footer>
-
-<script src="script.js"></script>
+  <footer>
+    <p>&copy; 2026 BEERAY DRONE. Tüm hakları saklıdır.</p>
+  </footer>
 
 </body>
 </html>
