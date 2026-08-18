@@ -2,154 +2,276 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Menü tıklamalarında pürüzsüz kayma */
 }
 
 body {
-  background-color: #0f0f11;
+  background-color: #0b0b0e;
   color: #ffffff;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Header */
+/* Üst Menü (Header) */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
-  background: #18181c;
+  padding: 20px 8%;
+  background: rgba(20, 20, 24, 0.85);
+  backdrop-filter: blur(10px); /* Cam efekti */
   border-bottom: 2px solid #e50914;
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  transition: all 0.4s ease;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
 }
 
 .logo span {
   color: #e50914;
 }
 
+nav {
+  display: flex;
+  gap: 25px;
+}
+
 nav a {
-  color: #ccc;
+  color: #e0e0e0;
   text-decoration: none;
-  margin: 0 15px;
-  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 nav a:hover {
   color: #e50914;
+  transform: translateY(-2px);
 }
 
 .btn-phone {
   background: #e50914;
-  color: #fff;
-  padding: 10px 18px;
+  color: #ffffff;
+  padding: 12px 22px;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
 }
 
-/* Hero Section */
+.btn-phone:hover {
+  background: #b80710;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5);
+}
+
+/* Karşılama Alanı (Hero) */
 .hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1200') center/cover;
+  padding: 120px 20px;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+              url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1920') center/cover no-repeat;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  max-width: 900px;
+  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 18px;
-  color: #ddd;
-  margin-bottom: 25px;
+  font-size: 22px;
+  color: #d0d0d0;
+  margin-bottom: 35px;
+  max-width: 700px;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .btn-main {
-  padding: 12px 25px;
+  padding: 16px 32px;
   text-decoration: none;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: bold;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .btn-main.wa { background: #25d366; }
 .btn-main.ig { background: #e1306c; }
 
-/* Hizmetler */
+/* Genel Bölüm Düzeni */
 .services, .gallery, .social-section {
-  padding: 60px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 5%;
   text-align: center;
 }
 
+.services h2, .gallery h2, .social-section h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.services h2::after, .gallery h2::after, .social-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e50914;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.services:hover h2::after, .gallery:hover h2::after, .social-section:hover h2::after {
+  width: 100px; /* Fare yaklaşınca çizgi uzar */
+}
+
+/* Hizmet Kartları */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .service-card {
-  background: #18181c;
-  padding: 30px;
-  border-radius: 8px;
-  border: 1px solid #2a2a30;
+  background: #141418;
+  padding: 40px 30px;
+  border-radius: 12px;
+  border: 1px solid #22222a;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: #e50914;
+  box-shadow: 0 15px 35px rgba(229, 9, 20, 0.2);
 }
 
 .service-card i {
-  font-size: 40px;
+  font-size: 48px;
   color: #e50914;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-/* Galeri */
+.service-card:hover i {
+  transform: scale(1.15) rotate(5deg); /* İkon haraketlenir */
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #aaaaaa;
+  font-size: 15px;
+}
+
+/* Galeri & Video Izgarası */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.card {
+  background: #141418;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #22222a;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #333340;
 }
 
 .card video {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
   border-radius: 8px;
+  background: #000;
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 20px;
 }
 
 /* Sosyal Medya */
+.social-section p {
+  color: #bbbbbb;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 25px;
+  gap: 25px;
+  margin-top: 35px;
   flex-wrap: wrap;
 }
 
 .social-btn {
-  padding: 12px 25px;
-  border-radius: 5px;
-  color: #fff;
+  padding: 16px 36px;
+  border-radius: 8px;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
@@ -158,27 +280,66 @@ nav a:hover {
 /* Sabit WhatsApp Butonu */
 .float-wa {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
+  width: 65px;
+  height: 65px;
+  bottom: 35px;
+  right: 35px;
   background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 35px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-  z-index: 100;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 38px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite; /* Hafifçe büyüyüp küçülme efekti */
+}
+
+.float-wa:hover {
+  transform: scale(1.15) rotate(10deg);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #18181c;
-  border-top: 1px solid #2a2a30;
-  color: #888;
+  padding: 30px;
+  background: #141418;
+  border-top: 1px solid #22222a;
+  color: #777777;
+  font-size: 15px;
+}
+
+/* KAYDIRDIKÇA BELİRME (ANIMATION) SINIFLARI */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

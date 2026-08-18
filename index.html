@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BEERAY DRONE | Profesyonel Hava Çekimleri</title>
   <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome İkon Kütüphanesi -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Üst Menü (Navbar) -->
+  <!-- Üst Menü (Header) -->
   <header>
     <div class="logo">BEERAY <span>DRONE</span></div>
     <nav>
       <a href="#hizmetler">Hizmetler</a>
       <a href="#galeri">Galeri</a>
       <a href="#sosyal">Sosyal Medya</a>
-      <a href="#iletisim">İletişim</a>
     </nav>
     <a href="tel:+905307304192" class="btn-phone"><i class="fa-solid fa-phone"></i> 0530 730 41 92</a>
   </header>
@@ -31,8 +31,8 @@
     </div>
   </section>
 
-  <!-- Hizmetler -->
-  <section id="hizmetler" class="services">
+  <!-- Hizmetlerimiz -->
+  <section id="hizmetler" class="services reveal">
     <h2>Hizmetlerimiz</h2>
     <div class="services-grid">
       <div class="service-card">
@@ -53,19 +53,21 @@
     </div>
   </section>
 
-  <!-- Örnek Videolar -->
-  <section id="galeri" class="gallery">
+  <!-- Örnek Videolar / Galeri -->
+  <section id="galeri" class="gallery reveal">
     <h2>Örnek Çekimlerimiz</h2>
     <div class="grid">
       <div class="card">
         <video controls poster="kapak1.jpg">
           <source src="video1.mp4" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
         </video>
         <h3>Manzara & Tanıtım Çekimi</h3>
       </div>
       <div class="card">
         <video controls poster="kapak2.jpg">
           <source src="video2.mp4" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
         </video>
         <h3>Özel Etkinlik Çekimi</h3>
       </div>
@@ -73,7 +75,7 @@
   </section>
 
   <!-- Sosyal Medya ve İletişim -->
-  <section id="sosyal" class="social-section">
+  <section id="sosyal" class="social-section reveal">
     <h2>Bizi Takip Edin</h2>
     <p>En son projelerimiz ve çekim arkası görüntüler için sosyal medya hesaplarımız:</p>
     <div class="social-links">
@@ -86,14 +88,17 @@
     </div>
   </section>
 
-  <!-- Sabit WhatsApp Butonu -->
-  <a href="https://wa.me/905307304192" class="float-wa" target="_blank">
+  <!-- Sağ Altta Sabit WhatsApp Butonu -->
+  <a href="https://wa.me/905307304192" class="float-wa" target="_blank" title="WhatsApp İletişim">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <!-- Sayfa Alt Bilgisi (Footer) -->
   <footer>
     <p>&copy; 2026 BEERAY DRONE. Tüm hakları saklıdır.</p>
   </footer>
 
+  <!-- Dinamik Script Bağlantısı -->
+  <script src="script.js"></script>
 </body>
 </html>
