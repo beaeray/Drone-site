@@ -3,134 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BEERAY DRONE | Premium Hava Çekimi & Prodüksiyon</title>
-  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <title>BEERAY AERIAL ARCHITECTURE</title>
+  <!-- Google Fonts: Space Grotesk & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  <!-- FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Arka Plan Işık Efektleri -->
-  <div class="bg-glow"></div>
-
-  <!-- Üst Menü -->
-  <header>
-    <div class="logo">BEERAY <span>STUDIO</span></div>
-    <nav>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#galeri">Portfolio</a>
-      <a href="#sosyal">Medya</a>
-    </nav>
-    <a href="tel:+905418190790" class="btn-lux-phone">
-      <i class="fa-solid fa-phone"></i>
-      <span>0541 819 07 90</span>
-    </a>
+  <!-- Minimalist Nav -->
+  <header class="navbar">
+    <div class="brand">BEERAY <span>/ 01</span></div>
+    <div class="nav-links">
+      <a href="#about">Yaklaşım</a>
+      <a href="#services">Kapsam</a>
+      <a href="#showcase">Çalışmalar</a>
+    </div>
+    <a href="https://wa.me/905418190790" target="_blank" class="nav-btn">Proje Başlat</a>
   </header>
 
-  <!-- Karşılama (Hero) -->
-  <section class="hero">
-    <div class="hero-tag">AERIAL CINEMATOGRAPHY</div>
-    <h1>Sinematik Perspektif & Yüksek Hassasiyet</h1>
-    <p>4K Ultra HD hava çekimleri, gayrimenkul tanıtımları ve sinematik prodüksiyon çözümleri.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/905418190790" target="_blank" class="btn-primary">
-        <i class="fa-brands fa-whatsapp"></i> Proje Başlatın
-      </a>
-      <a href="https://instagram.com/beaeray" target="_blank" class="btn-secondary">
-        <i class="fa-brands fa-instagram"></i> Instagram
-      </a>
+  <!-- Dev Tipografi Hero -->
+  <section class="hero-clean">
+    <div class="hero-label">HAVA SİNEMATOGRAFİSİ & VİZYON</div>
+    <h1 class="headline">GÖKYÜZÜNDEN<br>YENİDEN TANIMLANAN<br>PERSPEKTİF.</h1>
+    
+    <div class="hero-footer-grid">
+      <div class="hero-col">
+        <p class="lead-text">Mimari yapılar, özel prodüksiyonlar ve arazi projeleri için milimetrik hassasiyete sahip 4K hava çekim stüdyosu.</p>
+      </div>
+      <div class="hero-col action-col">
+        <a href="tel:+905418190790" class="direct-call">
+          <span class="call-num">0541 819 07 90</span>
+          <span class="call-tag">Hemen İletişime Geçin →</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Hizmetler -->
-  <section id="hizmetler" class="services reveal">
-    <div class="section-header">
-      <span>UZMANLIK ALANLARI</span>
-      <h2>Ayrıcalıklı Hizmetler</h2>
+  <!-- Büyük Görsel/Video Banner -->
+  <section class="media-banner">
+    <div class="video-container">
+      <video autoplay loop muted playsinline poster="kapak1.jpg">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-city-at-night-41484-large.mp4" type="video/mp4">
+      </video>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="card-icon"><i class="fa-solid fa-building-user"></i></div>
-        <h3>Gayrimenkul & Mimari</h3>
-        <p>Lüks konut, otel ve dev projelerin mimari estetiğini vurgulayan yüksek çözünürlüklü çekimler.</p>
+  </section>
+
+  <!-- Izgara Hizmetler Bölümü -->
+  <section id="services" class="section-grid">
+    <div class="grid-header">
+      <h2>01 / ÇÖZÜMLER</h2>
+    </div>
+    <div class="mosaic-container">
+      <div class="mosaic-box">
+        <span class="box-num">01</span>
+        <h3>Mimari & Gayrimenkul</h3>
+        <p>Lüks konut, otel ve dev altyapı projelerinin estetik çizgilerini vurgulayan dinamik havadan görüntüleme.</p>
       </div>
-      <div class="service-card">
-        <div class="card-icon"><i class="fa-solid fa-clapperboard"></i></div>
+      <div class="mosaic-box">
+        <span class="box-num">02</span>
         <h3>Sinematik Prodüksiyon</h3>
-        <p>Klip, reklam ve özel prodüksiyonlar için pürüzsüz ve hareketli dinamik hava açıları.</p>
+        <p>Reklam filmleri, klipler ve etkinlikler için yüksek hızlı FPV ve stabilize 4K çekimler.</p>
       </div>
-      <div class="service-card">
-        <div class="card-icon"><i class="fa-solid fa-chart-area"></i></div>
-        <h3>Endüstriyel & Arazi</h3>
-        <p>Geniş araziler, şantiyeler ve altyapı projeleri için profesyonel havadan haritalama ve takip.</p>
+      <div class="mosaic-box">
+        <span class="box-num">03</span>
+        <h3>Haritalama & Arazi</h3>
+        <p>Endüstriyel sahalar ve arsa projeleri için hassas ölçüm, takip ve ortofoto analizleri.</p>
       </div>
     </div>
   </section>
 
-  <!-- Galeri / Portfolio -->
-  <section id="galeri" class="gallery reveal">
-    <div class="section-header">
-      <span>PORTFOLIO</span>
-      <h2>Seçkin Çalışmalar</h2>
+  <!-- Örnek Çekimler (Showcase) -->
+  <section id="showcase" class="section-grid alt-bg">
+    <div class="grid-header">
+      <h2>02 / PORTFÖY</h2>
     </div>
-    <div class="grid">
-      <div class="portfolio-card">
-        <div class="video-wrapper">
-          <video controls poster="kapak1.jpg">
-            <source src="video1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="card-info">
-          <h3>Sinematik Şehir & Doğa Çekimi</h3>
-          <span>4K / 60 FPS Aerial</span>
+    <div class="work-grid">
+      <div class="work-item">
+        <video controls poster="kapak1.jpg">
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <div class="work-meta">
+          <h4>Sinematik Tanıtım Filmi</h4>
+          <span>4K Ultra HD</span>
         </div>
       </div>
-      <div class="portfolio-card">
-        <div class="video-wrapper">
-          <video controls poster="kapak2.jpg">
-            <source src="video2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="card-info">
-          <h3>Özel Proje & Tanıtım</h3>
-          <span>4K Commercial Production</span>
+      <div class="work-item">
+        <video controls poster="kapak2.jpg">
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div class="work-meta">
+          <h4>Özel Etkinlik & Çekim</h4>
+          <span>FPV Aerial Flight</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sosyal Medya & İletişim -->
-  <section id="sosyal" class="social-section reveal">
-    <div class="social-box">
-      <h2>Bizi Takip Edin</h2>
-      <p>Son projelerimiz ve kamera arkası görüntülerimize göz atın.</p>
-      <div class="social-links">
-        <a href="https://instagram.com/beaeray" target="_blank" class="social-item instagram">
-          <i class="fa-brands fa-instagram"></i>
-          <span>Instagram</span>
-        </a>
-        <a href="https://youtube.com" target="_blank" class="social-item youtube">
-          <i class="fa-brands fa-youtube"></i>
-          <span>YouTube</span>
-        </a>
-      </div>
+  <!-- İletişim / Footer -->
+  <footer class="footer-clean">
+    <div class="footer-main">
+      <h2>BİRLİKTE ÇALIŞALIM.</h2>
+      <a href="https://wa.me/905418190790" target="_blank" class="footer-wa-btn">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Hattı
+      </a>
     </div>
-  </section>
-
-  <!-- Canlı WhatsApp Butonu -->
-  <a href="https://wa.me/905418190790" class="float-wa" target="_blank" aria-label="WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 BEERAY STUDIO. All rights reserved.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BEERAY AERIAL. Tüm Hakları Saklıdır.</p>
+      <a href="tel:+905418190790">+90 541 819 07 90</a>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
